@@ -11,7 +11,8 @@
         "extensions": [
           ".scss"
         ],
-        "extractCss": "./dist/style.css"
+        "extractCss": "./dist/style.css",
+        "devMode": true,
       }
     ]
   ]

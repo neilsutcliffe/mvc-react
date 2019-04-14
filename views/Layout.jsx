@@ -1,6 +1,8 @@
 import React from 'react'
 import reactGuard from 'react-guard'
 import s from './Layout.module.scss'
+import s3 from './Home.module.scss'
+
 import classNames from 'classnames'
 // import picnic from 'picnic'
 

@@ -17,6 +17,7 @@ module.exports =
     name: 'server',
     target: 'node',
     mode: 'development',
+    watch: true,
     entry: __dirname + "/app.js",
     context: __dirname + "/app",
     output: {
@@ -28,14 +29,19 @@ module.exports =
     },
     externals: nodeModules,
     module: {
-      rules: [{
-        test: /\.(js|jsx|scss)$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-      },
-      {
-        test: /\.json$/, loader: 'json-loader'
-      },
+      rules: [
+        {
+          test: /\.scss$/,
+          loaders: ['style', 'css', 'sass']
+        },
+        {
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          loader: 'babel-loader'
+        },
+        {
+          test: /\.json$/, loader: 'json-loader'
+        },
       ]
     },
     plugins: [],

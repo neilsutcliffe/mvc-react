@@ -3,8 +3,6 @@ import Menu from './components/Menu'
 import Colors from './components/Colors'
 import Layout from './Layout'
 
-import s from './Home.module.scss'
-
 const colors = ['pink', 'red']
 
 const Home = (props, context) => {
