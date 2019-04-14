@@ -1,5 +1,7 @@
-import React from 'react';
-import reactGuard from 'react-guard';
+import React from 'react'
+import reactGuard from 'react-guard'
+import s from './Layout.module.scss'
+import classNames from 'classnames'
 // import picnic from 'picnic'
 
 const layout = (props) => {
@@ -9,7 +11,7 @@ const layout = (props) => {
     <html>
       <head>
         <title>React App</title>
-        <link rel="stylesheet" href='./normalize.css' />
+        <link rel="stylesheet" href='./picnic.min.css' />
         <link rel="stylesheet" href='./style.css' />
 
         <meta charSet="UTF-8" />
@@ -17,7 +19,9 @@ const layout = (props) => {
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
       </head>
       <body>
-        {props.children}
+        <div className={classNames(s.container, "flex five")}>
+          {props.children}
+        </div>
       </body>
     </html >
   )
@@ -27,15 +31,6 @@ const layout = (props) => {
 reactGuard(React, function (err, componentInfo) {
   // Print stacktrace to the console
   console && console.error && console.error(err.stack)
-
-  // Notify Sentry (replace with your service of choice)
-  Raven.captureException(err, {
-    extra: {
-      props: componentInfo.props,
-      state: componentInfo.state,
-      displayName: componentInfo.displayName
-    }
-  })
 
   // Replace failed component with "Failed to render".
   // Use `return null` to render nothing.

@@ -29,7 +29,7 @@ module.exports =
     externals: nodeModules,
     module: {
       rules: [{
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx|scss)$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
@@ -61,7 +61,6 @@ module.exports =
     },
     plugins: [],
     resolve: {
-      extensions: [
-        ".js", ".jsx"]
+      extensions: [".js", ".jsx"]
     }
   };

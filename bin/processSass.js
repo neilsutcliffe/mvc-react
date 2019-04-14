@@ -1,7 +1,7 @@
 var sass = require('node-sass');
-var path = require('path');
 
 module.exports = function processSass(data, filename) {
+  console.log("Generating styles...")
   var result;
   result = sass.renderSync({
     data: data,

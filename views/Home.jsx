@@ -11,14 +11,10 @@ const Home = (props, context) => {
   const { brands } = props;
   console.log(brands);
   return (
-    <>
-      <Layout>
-        <div className={s.container}>
-          <Menu brands={brands} />
-          <Colors colors={colors} />
-        </div>
-      </Layout>
-    </>
+    <Layout>
+      <Menu brands={brands} />
+      <Colors colors={colors} />
+    </Layout>
   )
 }
 
