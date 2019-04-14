@@ -3,15 +3,11 @@ import path from 'path'
 import cookieParser from 'cookie-parser'
 import logger from 'morgan'
 
+import indexRouter from './routes/index'
+
 // var createError = require('http-errors');
-var indexRouter = require('./routes/index');
 
 var app = express();
-
-// view engine setup
-app.set('views', __dirname + '/views');
-app.set('view engine', 'jsx');
-app.engine('jsx', require('express-react-views').createEngine());
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -24,7 +20,7 @@ app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  res.render('Error', { error: '404' });
+  res.send('404');
 });
 
 
@@ -36,7 +32,7 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('Error', { err });
+  res.send(err.message);
 });
 
 export default app;

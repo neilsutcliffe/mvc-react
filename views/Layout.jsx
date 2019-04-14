@@ -14,8 +14,10 @@ export default (props) => {
         <link rel="stylesheet" href='./normalize.css' />
       </head>
       <body>
-        {props.children}
+        <div className={styles.container}>
+          {props.children}
+        </div>
       </body>
-    </html>
+    </html >
   )
 }
