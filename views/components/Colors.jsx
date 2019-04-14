@@ -5,7 +5,7 @@ export default ({ colors }) => {
     <>
       <h3>Colors</h3>
       <ul>
-        {colors.map(brand => <li key={colors}>{colors}</li>)}
+        {colors.map(color => <li key={colors}>{color}</li>)}
       </ul>
     </>
   )

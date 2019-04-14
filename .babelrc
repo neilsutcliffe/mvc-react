@@ -2,5 +2,17 @@
   "presets": [
     "@babel/preset-env",
     "@babel/preset-react"
+  ],
+  "plugins": [
+    [
+      "css-modules-transform",
+      {
+        "preprocessCss": "./bin/processSass.js",
+        "extensions": [
+          ".scss"
+        ],
+        "extractCss": "./dist/style.css"
+      }
+    ]
   ]
 }

@@ -11,8 +11,8 @@ const brands = ['Rembrandt', 'QOR', 'Schmincke', 'Sennelier']
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  const appString = renderToString(<Home brands={brands}>Test</Home>);
-  res.send(appString);
+  const html = renderToString(<Home brands={brands}>Test</Home>);
+  res.send(`<!DOCTYPE html>${html}`);
 });
 
 export default router;

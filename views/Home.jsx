@@ -3,17 +3,23 @@ import Menu from './components/Menu'
 import Colors from './components/Colors'
 import Layout from './Layout'
 
+import s from './Home.module.scss'
+
 const colors = ['pink', 'red']
 
-export default (props) => {
+const Home = (props, context) => {
   const { brands } = props;
   console.log(brands);
   return (
     <>
       <Layout>
-        <Menu brands={brands} />
-        <Colors colors={colors} />
+        <div className={s.container}>
+          <Menu brands={brands} />
+          <Colors colors={colors} />
+        </div>
       </Layout>
     </>
   )
 }
+
+export default Home
