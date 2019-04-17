@@ -5,6 +5,9 @@ Service-Side only React powered MVC starter kit.
 
 I have taken the type MVC patterns I have seen in Enterprise .net appliations and created a very similar style system.
 
+## Philosphy
+Take the new and make it look old. If Fender does it for guitars, why can't we do it for websites?
+
 The React is *static*. It is rendered to HTML.
 --
 ## Why?
