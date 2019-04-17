@@ -13,8 +13,8 @@ const layout = (props) => {
     <html>
       <head>
         <title>React App</title>
-        <link rel="stylesheet" href='./picnic.min.css' />
-        <link rel="stylesheet" href='./style.css' />
+        <link rel="stylesheet" href='/picnic.min.css' />
+        <link rel="stylesheet" href='/style.css' />
 
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
@@ -29,14 +29,25 @@ const layout = (props) => {
   )
 }
 
-// Catch and process component render exceptions.
+// React guard will prevent parent components getting destroyed. This is great for debugging.
 reactGuard(React, function (err, componentInfo) {
   // Print stacktrace to the console
   console && console.error && console.error(err.stack)
 
+  // Inline style to prevent complications! It's a bad thing.
+  const style = {
+    background: 'salmon',
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    textAlign: 'center',
+    opacity: '0.5',
+    border: '1px dashed red',
+  }
+
   // Replace failed component with "Failed to render".
   // Use `return null` to render nothing.
-  return <div>Failed to render</div>
+  return <div style={style} title={err.stack}>Failed to render</div>
 })
 
 export default layout;

@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(cwd, 'public')));
 app.use('/', indexRouter);
 
-// Use the webpack stylesheet
+// Use the babel-created stylesheet. Webpack has no concept of these styles now.
 app.use('/style.css', (req, res, next) => {
   const stylePath = path.join(cwd, 'dist/style.css');
   res.sendFile(stylePath)

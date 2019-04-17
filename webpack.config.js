@@ -13,13 +13,13 @@ fs.readdirSync(path.resolve(__dirname, 'node_modules'))
 
 module.exports =
   {
-    // The configuration for the server-side rendering
+    // The configuration for the SERVER ONLY rendering
     name: 'server',
     target: 'node',
     mode: 'development',
     watch: true,
-    entry: __dirname + "/app.js",
-    context: __dirname + "/app",
+    entry: __dirname + "/mvc.js",
+    context: __dirname,
     output: {
       path: __dirname + "/dist",
       filename: 'bundle.js',
@@ -31,21 +31,21 @@ module.exports =
     module: {
       rules: [
         {
+          // Not Needed. Kept as these libraries are ESSENTIAL for ordinary client side use.
           test: /\.scss$/,
           loaders: ['style', 'css', 'sass']
         },
         {
+          // We pass all source files through babel. This strips any of the above scss files.
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
           loader: 'babel-loader'
-        },
-        {
-          test: /\.json$/, loader: 'json-loader'
-        },
+        }
       ]
     },
     plugins: [],
     resolve: {
-      extensions: [".js", ".jsx"]
+      // JSON Included since webpack 2. But it still has to look at the file.
+      extensions: [".js", ".jsx", '.json']
     }
   };

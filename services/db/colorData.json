@@ -1,0 +1,24 @@
+[
+  {
+    "ColorId": 1,
+    "BrandId": 1,
+    "Name": "Cobalt Teal",
+    "SeriesCode": "4",
+    "Pigments": [
+      "PG50"
+    ],
+    "Opacity": "Opaque",
+    "DisplayColor": "#00C0C1"
+  },
+  {
+    "ColorId": 2,
+    "BrandId": 1,
+    "Name": "Dioxazine Purple",
+    "SeriesCode": "3",
+    "Pigments": [
+      "PV23"
+    ],
+    "Opacity": "Tranparent",
+    "DisplayColor": "#CC00CC"
+  }
+]

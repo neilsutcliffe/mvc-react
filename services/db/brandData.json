@@ -1,0 +1,40 @@
+[
+  {
+    "BrandId": 1,
+    "DisplayName": "QOR",
+    "Manufactuer": "Golden",
+    "Product": "QOR Modern Watercolors",
+    "Grade": "Artist",
+    "Website": "https://www.qorcolors.com",
+    "Series": true,
+    "Capacities": [
+      11
+    ]
+  },
+  {
+    "BrandId": 2,
+    "DisplayName": "Daniel Smith",
+    "Manufactuer": "Golden",
+    "Product": "Extra Fine Watercolors",
+    "Grade": "Artist",
+    "Website": "http://danielsmith.com/",
+    "Series": true,
+    "Capacities": [
+      5,
+      15
+    ]
+  },
+  {
+    "BrandId": 3,
+    "DisplayName": "Schmincke Horadam",
+    "Manufactuer": "Schmincke",
+    "Product": "Horadam",
+    "Grade": "Artist",
+    "Website": "http://www.schmincke.de/",
+    "Series": true,
+    "Capacities": [
+      5,
+      15
+    ]
+  }
+]

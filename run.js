@@ -4,8 +4,8 @@
  * Module dependencies.
  */
 
-var bundle = require('../dist/bundle.js');
-const app = bundle.default
+var bundle = require('./dist/bundle.js');
+const app = bundle.default;
 var debug = require('debug')('pigment-info:server');
 var http = require('http');
 

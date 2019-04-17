@@ -5,14 +5,14 @@ import Layout from './Layout'
 
 const colors = ['pink', 'red']
 
-const Home = (props, context) => {
-  const { brands } = props;
+const Chart = (props, context) => {
+  const { brands, colors, brand } = props;
   return (
     <Layout>
       <Menu brands={brands} />
-      <h1>Select a Brand</h1>
+      <Colors colors={colors} title={brand.DisplayName} />
     </Layout>
   )
 }
 
-export default Home
+export default Chart
